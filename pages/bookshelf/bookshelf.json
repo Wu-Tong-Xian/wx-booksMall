@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "homeHead":"../../conponents/homeHead/homeHead"
+  },
+  "navigationBarTitleText": "Yellow书城欢迎您"
+}

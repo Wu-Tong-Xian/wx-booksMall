@@ -1,0 +1,31 @@
+/* pages/getMinor/getMinor.wxss */
+.active {
+	color: red;
+	font-size: 32rpx;
+	margin-left: 20rpx;
+}
+
+/* 一本书的容器 */
+.bookContainer {
+	width: 722rpx;
+	height: 270rpx;
+
+}
+.mgtb {
+	margin: 5rpx 0 5rpx 0;
+}
+
+.bookImage {
+	width: 200rpx;
+	height: 270rpx;
+
+}
+
+/* 书籍简介 */
+.shortIntro {
+	width: 480rpx;
+	height: 135rpx;
+}
+.tags {
+	width: 400rpx;
+}

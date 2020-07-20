@@ -1,0 +1,75 @@
+/* pages/detail/detail.wxss */
+.cover {
+	width: 230rpx;
+	height: 300rpx;
+}
+.bg {
+	width: 800rpx;
+	height: 100rpx;
+	background: #f47;
+	text-align: center;
+}
+/* 开始阅读和加入书架样式 */
+
+.bord {
+	width: 250rpx;
+	line-height: 70rpx;
+	height: 70rpx;
+	border: 1px solid rgb(145, 140, 140);
+	border-radius: 50rpx;
+}
+.bord-bg {
+	background: #f47;
+}
+.box-bg1 {
+	background: #F7F7F7;
+}
+.box-bg2 {
+	width: 660rpx;
+	background: #FFFFFF;
+	margin-left: 48rpx;
+}
+.van-tabs {
+	border-bottom: 2rpx solid rgb(189, 178, 178);
+}
+.border-t{
+	border-top: 2rpx solid rgb(189, 178, 178);
+}
+.catalog-box {
+	margin: 20rpx auto;
+	width: 600rpx;
+	height: 60rpx;
+	background: #F7F7F7;
+	line-height: 60rpx;
+}
+.img-refresh {
+	width: 40rpx;
+	height: 40rpx;
+}
+/* 相关推荐的图片 */
+.books-cover {
+	width: 195rpx;
+	height: 260rpx;
+	margin-right: 41rpx;
+}
+.box-books {
+	width: 600rpx;
+}
+/* 用户评论 */
+/* 头像图片 */
+.docs-avatar {
+	width: 110rpx;
+	height: 110rpx;
+	border-radius: 50%;
+}
+/* 装头像的盒子 */
+.avatar-box {
+	width: 110rpx;
+	height: 110rpx;
+	border:2rpx solid rgb(212, 192, 192);
+	border-radius: 50%;
+}
+.nickname-box {
+	width: 500rpx;
+
+}

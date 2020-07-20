@@ -1,0 +1,23 @@
+<!--pages/rankInfo/rankInfo.wxml-->
+<view  class="fl box-List j-around">
+	<view wx:for='{{boxList}}' wx:key='index'>
+		<view bindtap="switch" class="{{switch === index ? 'active' : ''}}"
+		data-index="{{index}}" 
+		>{{item.name}}</view>
+	</view>
+</view>
+<view>
+	<view wx:for='{{books}}' wx:key='index'>
+		<view bindtap="detail" data-id="{{item._id}}" class="fl j-between mg-lr10 fz16 bookContainer">
+			<image class="bookImage" src="{{item.cover}}"></image>
+			<view>
+				<view>{{item.title}}</view>
+				<view class="col6 mgtb ">{{item.author}}</view>
+				<view class="colg fl-wrap  shortIntro">{{item.shortIntro}}...</view>
+				<view class="fl tags  ">
+				</view>
+			</view>
+		</view>
+		<view class="mg10 fz14 bor-b"></view>
+	</view>
+</view>

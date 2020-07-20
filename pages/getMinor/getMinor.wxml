@@ -1,0 +1,47 @@
+<!--pages/getMinor/getMinor.wxml-->
+<view class="fl mg-t10 bor-b">
+	<view wx:for="{{typeList}}" wx:key='index' class=" mg-l10 pd-b10 fz18">
+		<view bindtap="typeList" data-type="{{item.id}}" data-index="{{index}}" class="{{category ===index ? 'active' : ''}}">{{item.name}}</view>
+	</view>
+</view>
+
+
+<view class="fl mg-t10 bor-b">
+	<view class="mg-l10 fz16 mg-b10 ">全部</view>
+	<!-- 点击男生 跳过来的 -->
+	<view wx:for="{{male}}" wx:key='index'>
+		<view class="fl" wx:if='{{item.major === name}}'>
+			<view wx:for='{{item.mins}}' wx:key='index' wx:for-item='item1' wx:for-index='index1' class="fz16 mg-l10">
+				<view bindtap="minor" data-index1="{{index1}}" class="{{category1 === index1 ? 'active' : ''}}" data-minor="{{item1}}">{{item1}}</view>
+
+			</view>
+		</view>
+	</view>
+	<!-- 点击女生跳过来的 -->
+	<view wx:for="{{female}}" wx:key='index'>
+		<view class="fl" wx:if='{{item.major === name}}'>
+			<view wx:for='{{item.mins}}' wx:key='index' wx:for-item='item1' wx:for-index='index1' class="fz16 mg-l10 ">
+				<view bindtap="minor" data-minor="{{item1}}" data-index1="{{index1}}" class="{{category1 === index1 ? 'active' : ''}}">{{item1}}</view>
+
+			</view>
+		</view>
+	</view>
+
+</view>
+
+	<view wx:for='{{books}}' wx:key='index'>
+		<view bindtap="detail" data-id="{{item._id}}" class="fl j-between mg-lr10 fz16 bookContainer">
+			<image class="bookImage" src="{{item.cover}}"></image>
+			<view>
+				<view>{{item.title}}</view>
+				<view class="col6 mgtb ">{{item.author}}</view>
+				<view class="colg fl-wrap  shortIntro">{{item.shortIntro}}...</view>
+			<view class="fl tags  ">
+				<view  wx:for='{{item.tags}}' wx:key='index' wx:for-item='item1' wx:for-index='index1'> <view class="mg-r10 t-none">
+				
+				{{item1}}</view>	</view>
+			</view>
+			</view>
+		</view>
+		<view class="mg10 fz14 bor-b"></view>
+	</view>

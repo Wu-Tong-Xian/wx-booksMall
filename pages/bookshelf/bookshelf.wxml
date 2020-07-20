@@ -1,0 +1,35 @@
+<!-- 如果没有收藏书架的状态 -->
+<view wx:if="{{bookshelf.length < 1}}" class="head1">
+	<view class="fl mg-lr20 j-between mg-b20">
+		<image src="../../images/img/pitch.png"></image>
+		<view class="fl">
+			<view class="help" bindtap="gohelp"><a>帮助</a></view>
+			<image src="../../images/img/refresh.png"></image>
+		</view>
+	</view>
+	<view class="fz16 t-center mg-t20">
+		主人还没有收藏书籍,请先去书城收藏书籍ba！
+	</view>
+</view>
+<!-- 书架有收藏书籍的状态 -->
+<view wx:else class="">
+	<view class="fl mg-lr20 j-between head1 mg-b20">
+		<image   src="../../images/img/ben.png"></image>
+		<view class="fl">
+			<view class="help" bindtap="gohelp"> <a>帮助</a> </view>
+			<image src="../../images/img/refresh.png"></image>
+		</view>
+	</view>
+
+	<!-- 书籍信息 -->
+	<view class="fl docs-cover t-center  fl-wrap">
+		<view wx:for='{{bookshelf}}' class="fz16 mg-t10 ">
+			<view bindtap="read"  data-id='{{item._id}}' >
+				<image class="cover-img fl " src="{{item.cover}}"></image>
+				<view class="colr font-w p-re" catchtap="del" data-id="{{item._id}}">X</view>
+				<view class="font-w">{{item.title}}</view>
+				<view>阅读到第0章</view>
+			</view>
+		</view>
+	</view>
+</view>

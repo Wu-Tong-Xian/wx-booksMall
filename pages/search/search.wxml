@@ -1,0 +1,61 @@
+<view class="bg">
+	<view class="mg-tb10 input-box fl">
+		<image class="search" src="../../images/img/search.png "></image>
+		<view class="">
+			<input type="text" confirm-type='search' value='{{value}}' placeholder="输入书名或者作者名" bindconfirm="search" bindfocus="{{focus}}"></input>
+
+			<!-- bind(点击）focus(取焦点) bindfocus(点击获取焦点)-->
+			<!-- bindinput  实时监听 输入就有，删除就没 -->
+			<!-- bindconfirm  回车监听  -->
+			<!-- 设置了	type="text" 就可以confirm-type='search' search（右下角按钮为“搜索”）-->
+		</view>
+	</view>
+</view>
+<!-- 如果input框没有输入正常显示 -->
+<view wx:if='{{value === ""}}'>
+	<view class="fz16 fl mg-lr10 j-between">
+		<view>大家都在搜</view>
+		<view bindtap="refresh" class="fl">
+			<image class="img-refresh" src="../../images/img/show.png "></image>
+			<view class="colr mg-l10 "> 换一换</view>
+		</view>
+	</view>
+	<!--搜索热词  刷新之后随机更换的 -->
+	<view class="fl fl-wrap">
+		<view wx:for='{{hotWords}}' wx:key='index'>
+			<view class="item fz18 colw" style="background:{{item.color}}" bindtap="detail" data-id='{{item.title.book}}'>{{item.title.word}}</view>
+		</view>
+	</view>
+	<!-- 搜索历史，清空 -->
+	<view>
+		<view class="fz16 fl mg-lr10 j-between">
+			<view>搜索历史</view>
+			<view bindtap="del" class="fl">
+				<image class="img-refresh " src="../../images/img/del.png "></image>
+				<view bindtap="remove" class="colr mg-l10">清空记录</view>
+			</view>
+		</view>
+		<view>
+			<view class="fl mg20">
+				<view wx:for='{{historySearch}}' wx:key='index'>
+					<view bindtap="searchHistory" data-item="{{item}}" class="mg-l10">{{item}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</view>
+<view wx:else>
+	<view wx:for='{{books}}' wx:key='index'>
+		<view bindtap="detail" data-id="{{item._id}}" class="fl j-between mg-lr10 fz16 bookContainer">
+			<image class="bookImage" src="{{item.cover}}"></image>
+			<view>
+				<view>{{item.title}}</view>
+				<view class="colg">{{item.author}}</view>
+				<view class="colg fl-wrap  shortIntro">{{item.shortIntro}}...</view>
+				<view class="colr ">最近收藏:{{item.latelyFollower}}</view>
+			</view>
+		</view>
+		<view class="mg10 fz14 bor-b">&官人来看看嘛</view>
+	</view>
+</view>

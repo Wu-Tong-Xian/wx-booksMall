@@ -1,0 +1,49 @@
+/* pages/search/search.wxss */
+.input-box {
+	width: 650rpx;
+	height: 60rpx;
+	border: 1px solid rgb(231, 174, 174);
+	line-height: 62rpx;
+	border-radius: 12rpx;
+	margin: 0 auto;
+
+}
+
+.bg {
+	width: 650rpx;
+	border-radius: 12rpx;
+	background: #EFEFEF;
+	margin: 20rpx auto;
+}
+
+.input-box image {
+	width: 51rpx;
+	height: 51rpx;
+	margin: 5rpx 10rpx 0 55rpx
+}
+
+.img-refresh {
+	width: 40rpx;
+	height: 40rpx;
+	color: red;
+}
+.item {
+	padding: 20rpx 20rpx;
+	margin: 20rpx 10rpx;
+}
+/* 一本书的容器 */
+.bookContainer {
+width: 722rpx;
+height: 270rpx;
+
+}
+.bookImage {
+	width:200rpx ;
+	height: 260rpx;
+
+}
+/* 书籍简介 */
+.shortIntro {
+	width:480rpx ;
+	height: 150rpx;
+}	

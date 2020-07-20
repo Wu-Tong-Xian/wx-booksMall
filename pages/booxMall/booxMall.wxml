@@ -1,0 +1,69 @@
+<!--pages/booxMall/booxMall.wxml-->
+<view>
+	<van-tabs active="{{ active }}" bind:change="onChange">
+		<!-- 分类 -->
+		<van-tab title="分类">
+			<view class="bg">
+				<view class="Boys">
+					男生
+				</view>
+				<view class="fl fl-wrap">
+					<view wx:for="{{male}}" wx:key='index'>
+						<!-- 点击大分类跳转到男生小分类 -->
+						<view bindtap="getMinorBoys" data-male='male' data-item='{{item.name}}' class="class-box">
+							<view>{{item.name}}</view>
+							<view class="colg">{{item.bookCount}}本</view>
+						</view>
+					</view>
+				</view>
+				<view class="Boys">
+					女生
+				</view>
+				<view class="fl fl-wrap">
+					<view wx:for="{{female}}" wx:key='index'>
+						<!-- 点击大分类跳转到女生小分类 -->
+						<view bindtap="getMinorGirl" data-female='female' data-item='{{item.name}}' class="class-box">
+							<view>{{item.name}}</view>
+							<view class="colg">{{item.bookCount}}本</view>
+						</view>
+					</view>
+				</view>
+				<view class="Boys">
+					出版
+				</view>
+				<view class="fl fl-wrap">
+					<view wx:for="{{press}}" wx:key='index'>
+						<view bindtap="getMinorBoys" data-male='male' data-item='{{item.name}}' class="class-box">
+							<view>{{item.name}}</view>
+							<view class="colg">{{item.bookCount}}本</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</van-tab>
+		<!-- 排行 -->
+
+		<van-tab title="排行">
+			<view class="Boys">
+				男生
+			</view>
+			<view wx:for="{{female1}}" wx:key="index">
+				<!-- 点击跳转到排名详情 -->
+				<view bindtap='rankInfo' data-item='{{item}}' class="fl mg-tb10  mg-l20">
+					<image class="image" src="{{item.cover}}"></image>
+					<view class="mg-l10">{{item.title}}</view>
+				</view>
+			</view>
+			<view class="Boys">
+				女生
+			</view>
+			<view wx:for="{{male1}}" wx:key="index">
+				<!-- 点击跳转到排名详情 -->
+				<view bindtap='rankInfo' data-item='{{item}}' class="fl mg-tb10 mg-l20">
+					<image class="image" src="{{item.cover}}"></image>
+					<view class="mg-l10">{{item.title}}</view>
+				</view>
+			</view>
+		</van-tab>
+	</van-tabs>
+</view>

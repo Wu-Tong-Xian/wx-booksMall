@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-rate": "../../lib/vant/rate/index",
+    "van-tab": "../../lib/vant/tab/index",
+    "van-tabs": "../../lib/vant/tabs/index",
+    "van-icon": "../../lib/vant/icon/index"
+  },
+  "navigationBarTitleText": "详情"
+}

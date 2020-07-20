@@ -1,0 +1,82 @@
+<!--pages/detail/detail.wxml-->
+<view class="bg">
+	<!-- 详情图片 -->
+	<image class="cover" src="{{detail.cover}}"></image>
+	<!-- 标题 -->
+	<view class="font-w">{{detail.title}}</view>
+	<!-- 作者 -->
+	<view class="fz16 pd-b20 mg-t10 colg"> {{detail.author}}</view>
+	<view class="box-bg1">
+		<!-- 开始阅读和加入书架 -->
+
+		<view class="fl j-evenly ">
+			<view bindtap="read" class=" bord fz16 bord-bg colw">开始阅读</view>
+			<view wx:if="{{isBookshelf === false}}">
+			  <view bindtap="bookshelf" class=" bord fz16 colb">加入书架</view>
+			</view>
+			
+			<view wx:if="{{isBookshelf === true}}">
+			  <view bindtap="removeBookshelf"  class=" bord fz16 colb">已加入书架</view>
+			</view>
+		</view>
+
+		<view class="mg-t10 ">
+			<!-- 评分 -->
+			<van-rate readonly value="{{detail.rating.score/2}}" />
+		</view>
+		<!-- 最后更新章节 -->
+		<view class="fl pd-b20 fz16 j-center">
+			<view class="  mg-r10 ">更新至</view>
+			<view class="col6">{{detail.lastChapter}}</view>
+		</view>
+		<view class="box-bg2 fz16  t-center">
+			<van-tabs class="border-t" active="{{ active }}" animated>
+				<!-- 详情 -->
+				<van-tab title="详情">
+					<view class="border-t"></view>
+					<view class="mg-t10">{{detail.longIntro}}</view>
+				</van-tab>
+				<!-- 评论 -->
+
+				<van-tab title="评论({{detail.rating.count}})">
+					<view class="border-t"></view>
+					<view wx:for='{{docs}}' wx:key='index' class="fl mg-tb10 ">
+						<view class="avatar-box">
+							<!--装头像的盒子-->
+							<image class="docs-avatar" src="{{item.author.avatar}}"></image>
+						</view>
+						<view class="nickname-box fl-wrap">
+							<!-- 评论名称 -->
+							<view class="colr">{{item.author.nickname}}</view>
+							<!-- 评论语句 -->
+							<view>{{item.content}}</view>
+						</view>
+					</view>
+				</van-tab>
+			</van-tabs>
+			<view class="catalog-box">
+				<view>
+					<van-icon class="colr" name="bar-chart-o" />总目录({{detail.chaptersCount}}章)</view>
+			</view>
+			<view class="fz16 fl mg-lr10 j-between">
+				<view>看过这本书的人还在看</view>
+				<view class="fl mg-b10">
+					<image class="img-refresh" src="../../images/img/show.png "></image>
+					<view bindtap='changes' class="colr mg-l10 "> 换一换</view>
+				</view>
+
+			</view>
+			<!-- 相关推荐 -->
+			<view class="fl box-books">
+				<view wx:for='{{bookss}}' wx:key='index'>
+					<view bindtap="detail" data-id='{{item._id}}'>
+						<!-- 推荐书籍图片 -->
+						<image class="books-cover " src="{{item.cover}}"></image>
+						<!-- 推荐书籍名称 -->
+						<view class="mg-r10 col6">{{item.title}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

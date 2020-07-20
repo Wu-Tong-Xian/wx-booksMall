@@ -1,0 +1,45 @@
+{
+	"pages": [
+		"pages/bookshelf/bookshelf",
+		"pages/booxMall/booxMall",
+		"pages/search/search",
+		"pages/detail/detail",
+		"pages/help/help",
+		"pages/rankInfo/rankInfo",
+		"pages/getMinor/getMinor",
+		"pages/searchDetail/searchDetail",
+		"pages/read/read"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#f47",
+		"navigationBarTitleText": "Yellow书城欢迎您",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"color": "#ccc",
+		"selectedColor": "#f47",
+		"list": [
+			{
+				"text": "书架",
+				"pagePath": "pages/bookshelf/bookshelf",
+				"iconPath": "images/tabBar/bookshelf.png",
+				"selectedIconPath": "images/tabBar/bookshelf-active.png"
+			},
+			{
+				"text": "书城",
+				"pagePath": "pages/booxMall/booxMall",
+				"iconPath": "images/tabBar/booxMall.png",
+				"selectedIconPath": "images/tabBar/booxMall-active.png"
+			},
+			{
+				"text": "搜索",
+				"pagePath": "pages/search/search",
+				"iconPath": "images/tabBar/search.png",
+				"selectedIconPath": "images/tabBar/search-active.png"
+			}
+		]
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json"
+}

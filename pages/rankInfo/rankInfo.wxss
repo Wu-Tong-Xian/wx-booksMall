@@ -1,0 +1,33 @@
+.box-List {
+	height: 80rpx;
+	background: #EDECE8;
+	line-height: 80rpx;
+}
+/* 一本书的容器 */
+.bookContainer {
+	width: 722rpx;
+	height: 270rpx;
+	margin-top: 25rpx;
+}
+.mgtb {
+	margin: 5rpx 0 5rpx 0;
+}
+
+.bookImage {
+	width: 200rpx;
+	height: 270rpx;
+
+}
+
+/* 书籍简介 */
+.shortIntro {
+	width: 480rpx;
+	height: 135rpx;
+}
+.tags {
+	width: 400rpx;
+}
+.active {
+	color: red;
+	border-bottom: 2px solid red;
+}

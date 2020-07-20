@@ -1,0 +1,5 @@
+<!--pages/read/read.wxml-->
+<view wx:for='{{title}}' class="mg-l20 mg-t20">
+  <view class="colr">{{item.title}}</view>
+  <view class="fz16">还想白嫖,hehe 真的不存在</view>
+</view>

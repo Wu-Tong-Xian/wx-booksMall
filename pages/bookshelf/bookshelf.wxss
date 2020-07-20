@@ -1,0 +1,36 @@
+.head1 image {
+	width: 60rpx;
+	height: 60rpx;
+}
+
+.head1 {
+	margin-top: 20rpx;
+}
+.help {
+	margin-right: 20rpx;
+	width: 120rpx;
+	height: 50rpx;
+	border-radius: 8px;
+	border: 1px solid rgb(187, 176, 176);
+}
+a {
+	margin: 30rpx 0 0rpx 18rpx;
+	
+}
+/* 书架图片框  */
+.avatar-cover {
+	width: 760rpx;
+	
+}
+.cover-img {
+	width: 220rpx;
+	height: 310rpx;
+	margin-left: 22rpx;
+}
+.p-re {
+	position: relative;
+	top:-316rpx;
+	left: 110rpx;
+	font-size: 36rpx;
+	z-index: 888;
+}
